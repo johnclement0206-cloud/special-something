@@ -323,281 +323,44 @@ body {
 }
 
 /* Beautiful scattered falling flowers effect - natural individual flowers */
+/* Individual flower petal styles - managed by JavaScript */
 .flower-petal {
     position: absolute;
     pointer-events: none;
     font-size: 24px;
     opacity: 0;
-    animation: flower-drift linear infinite;
+    will-change: transform, opacity;
 }
 
-/* Create 30 individual flowers with unique positions and timing */
-.flower-petal:nth-child(1) {
-    left: 5%;
-    animation-duration: 14s;
-    animation-delay: 0s;
-    font-size: 22px;
-}
-.flower-petal:nth-child(1)::before { content: '🌸'; }
-
-.flower-petal:nth-child(2) {
-    left: 12%;
-    animation-duration: 16s;
-    animation-delay: 2s;
-    font-size: 26px;
-}
-.flower-petal:nth-child(2)::before { content: '✿'; }
-
-.flower-petal:nth-child(3) {
-    left: 18%;
-    animation-duration: 13s;
-    animation-delay: 5s;
-    font-size: 20px;
-}
-.flower-petal:nth-child(3)::before { content: '🌼'; }
-
-.flower-petal:nth-child(4) {
-    left: 25%;
-    animation-duration: 17s;
-    animation-delay: 1s;
-    font-size: 24px;
-}
-.flower-petal:nth-child(4)::before { content: '❀'; }
-
-.flower-petal:nth-child(5) {
-    left: 32%;
-    animation-duration: 15s;
-    animation-delay: 7s;
-    font-size: 28px;
-}
-.flower-petal:nth-child(5)::before { content: '🌺'; }
-
-.flower-petal:nth-child(6) {
-    left: 38%;
-    animation-duration: 18s;
-    animation-delay: 3s;
-    font-size: 21px;
-}
-.flower-petal:nth-child(6)::before { content: '✾'; }
-
-.flower-petal:nth-child(7) {
-    left: 45%;
-    animation-duration: 14s;
-    animation-delay: 9s;
-    font-size: 25px;
-}
-.flower-petal:nth-child(7)::before { content: '🌷'; }
-
-.flower-petal:nth-child(8) {
-    left: 51%;
-    animation-duration: 16s;
-    animation-delay: 4s;
-    font-size: 23px;
-}
-.flower-petal:nth-child(8)::before { content: '🌹'; }
-
-.flower-petal:nth-child(9) {
-    left: 58%;
-    animation-duration: 13s;
-    animation-delay: 11s;
-    font-size: 27px;
-}
-.flower-petal:nth-child(9)::before { content: '💐'; }
-
-.flower-petal:nth-child(10) {
-    left: 65%;
-    animation-duration: 19s;
-    animation-delay: 6s;
-    font-size: 22px;
-}
-.flower-petal:nth-child(10)::before { content: '🏵️'; }
-
-.flower-petal:nth-child(11) {
-    left: 72%;
-    animation-duration: 15s;
-    animation-delay: 8s;
-    font-size: 26px;
-}
-.flower-petal:nth-child(11)::before { content: '🌸'; }
-
-.flower-petal:nth-child(12) {
-    left: 78%;
-    animation-duration: 17s;
-    animation-delay: 12s;
-    font-size: 20px;
-}
-.flower-petal:nth-child(12)::before { content: '✿'; }
-
-.flower-petal:nth-child(13) {
-    left: 85%;
-    animation-duration: 14s;
-    animation-delay: 2s;
-    font-size: 24px;
-}
-.flower-petal:nth-child(13)::before { content: '🌼'; }
-
-.flower-petal:nth-child(14) {
-    left: 92%;
-    animation-duration: 16s;
-    animation-delay: 10s;
-    font-size: 28px;
-}
-.flower-petal:nth-child(14)::before { content: '❀'; }
-
-.flower-petal:nth-child(15) {
-    left: 8%;
-    animation-duration: 18s;
-    animation-delay: 5s;
-    font-size: 21px;
-}
-.flower-petal:nth-child(15)::before { content: '🌺'; }
-
-.flower-petal:nth-child(16) {
-    left: 15%;
-    animation-duration: 13s;
-    animation-delay: 13s;
-    font-size: 25px;
-}
-.flower-petal:nth-child(16)::before { content: '✾'; }
-
-.flower-petal:nth-child(17) {
-    left: 22%;
-    animation-duration: 15s;
-    animation-delay: 7s;
-    font-size: 23px;
-}
-.flower-petal:nth-child(17)::before { content: '🌷'; }
-
-.flower-petal:nth-child(18) {
-    left: 29%;
-    animation-duration: 17s;
-    animation-delay: 14s;
-    font-size: 27px;
-}
-.flower-petal:nth-child(18)::before { content: '🌹'; }
-
-.flower-petal:nth-child(19) {
-    left: 36%;
-    animation-duration: 14s;
-    animation-delay: 4s;
-    font-size: 22px;
-}
-.flower-petal:nth-child(19)::before { content: '💐'; }
-
-.flower-petal:nth-child(20) {
-    left: 42%;
-    animation-duration: 16s;
-    animation-delay: 9s;
-    font-size: 26px;
-}
-.flower-petal:nth-child(20)::before { content: '🏵️'; }
-
-.flower-petal:nth-child(21) {
-    left: 49%;
-    animation-duration: 18s;
-    animation-delay: 11s;
-    font-size: 20px;
-}
-.flower-petal:nth-child(21)::before { content: '🌸'; }
-
-.flower-petal:nth-child(22) {
-    left: 55%;
-    animation-duration: 13s;
-    animation-delay: 6s;
-    font-size: 24px;
-}
-.flower-petal:nth-child(22)::before { content: '✿'; }
-
-.flower-petal:nth-child(23) {
-    left: 62%;
-    animation-duration: 15s;
-    animation-delay: 15s;
-    font-size: 28px;
-}
-.flower-petal:nth-child(23)::before { content: '🌼'; }
-
-.flower-petal:nth-child(24) {
-    left: 69%;
-    animation-duration: 17s;
-    animation-delay: 3s;
-    font-size: 21px;
-}
-.flower-petal:nth-child(24)::before { content: '❀'; }
-
-.flower-petal:nth-child(25) {
-    left: 75%;
-    animation-duration: 14s;
-    animation-delay: 12s;
-    font-size: 25px;
-}
-.flower-petal:nth-child(25)::before { content: '🌺'; }
-
-.flower-petal:nth-child(26) {
-    left: 82%;
-    animation-duration: 16s;
-    animation-delay: 8s;
-    font-size: 23px;
-}
-.flower-petal:nth-child(26)::before { content: '✾'; }
-
-.flower-petal:nth-child(27) {
-    left: 89%;
-    animation-duration: 18s;
-    animation-delay: 13s;
-    font-size: 27px;
-}
-.flower-petal:nth-child(27)::before { content: '🌷'; }
-
-.flower-petal:nth-child(28) {
-    left: 95%;
-    animation-duration: 13s;
-    animation-delay: 1s;
-    font-size: 22px;
-}
-.flower-petal:nth-child(28)::before { content: '🌹'; }
-
-.flower-petal:nth-child(29) {
-    left: 10%;
-    animation-duration: 15s;
-    animation-delay: 10s;
-    font-size: 26px;
-}
-.flower-petal:nth-child(29)::before { content: '💐'; }
-
-.flower-petal:nth-child(30) {
-    left: 88%;
-    animation-duration: 17s;
-    animation-delay: 5s;
-    font-size: 20px;
-}
-.flower-petal:nth-child(30)::before { content: '🏵️'; }
-
+/* Optimized animation for falling flowers */
 @keyframes flower-drift {
     0% {
-        top: -10%;
-        transform: translateX(0) rotate(0deg) scale(1);
+        transform: translateY(0) translateX(0) rotate(0deg) scale(1);
         opacity: 0;
     }
     10% {
         opacity: 0.8;
     }
     25% {
-        transform: translateX(20px) rotate(90deg) scale(1.1);
+        transform: translateY(25vh) translateX(20px) rotate(90deg) scale(1.1);
     }
     50% {
-        transform: translateX(-10px) rotate(180deg) scale(0.9);
+        transform: translateY(50vh) translateX(-10px) rotate(180deg) scale(0.9);
     }
     75% {
-        transform: translateX(15px) rotate(270deg) scale(1.05);
+        transform: translateY(75vh) translateX(15px) rotate(270deg) scale(1.05);
     }
     90% {
         opacity: 0.8;
     }
     100% {
-        top: 110%;
-        transform: translateX(-25px) rotate(360deg) scale(1);
+        transform: translateY(110vh) translateX(-25px) rotate(360deg) scale(1);
         opacity: 0;
     }
+}
+
+.flower-petal.falling {
+    animation: flower-drift linear forwards;
 }
 
 /* Collage page styles */
