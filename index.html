@@ -14,38 +14,7 @@
         <div class="background-layer"></div>
         
         <!-- Falling flowers layer (above background, behind content) -->
-        <div class="falling-flowers-container">
-            <div class="flower-petal"></div>
-            <div class="flower-petal"></div>
-            <div class="flower-petal"></div>
-            <div class="flower-petal"></div>
-            <div class="flower-petal"></div>
-            <div class="flower-petal"></div>
-            <div class="flower-petal"></div>
-            <div class="flower-petal"></div>
-            <div class="flower-petal"></div>
-            <div class="flower-petal"></div>
-            <div class="flower-petal"></div>
-            <div class="flower-petal"></div>
-            <div class="flower-petal"></div>
-            <div class="flower-petal"></div>
-            <div class="flower-petal"></div>
-            <div class="flower-petal"></div>
-            <div class="flower-petal"></div>
-            <div class="flower-petal"></div>
-            <div class="flower-petal"></div>
-            <div class="flower-petal"></div>
-            <div class="flower-petal"></div>
-            <div class="flower-petal"></div>
-            <div class="flower-petal"></div>
-            <div class="flower-petal"></div>
-            <div class="flower-petal"></div>
-            <div class="flower-petal"></div>
-            <div class="flower-petal"></div>
-            <div class="flower-petal"></div>
-            <div class="flower-petal"></div>
-            <div class="flower-petal"></div>
-        </div>
+        <div class="falling-flowers-container" id="flowersContainer"></div>
         
         <!-- Decorative flowers scattered around -->
         <div class="flower-decor flower-1" style="top: 5%; left: 8%;">🌾</div>
@@ -100,5 +69,47 @@
             </div>
         </div>
     </div>
+    
+    <script>
+        // Efficient falling flowers animation with cleanup
+        (function() {
+            const container = document.getElementById('flowersContainer');
+            const flowers = ['🌸', '✿', '🌼', '❀', '🌺', '✾', '🌷', '🌹', '💐', '🏵️'];
+            const durations = [13, 14, 15, 16, 17, 18, 19]; // seconds
+            const sizes = [20, 22, 24, 26, 28]; // pixels
+            
+            function createFlower() {
+                const flower = document.createElement('div');
+                flower.className = 'flower-petal falling';
+                flower.textContent = flowers[Math.floor(Math.random() * flowers.length)];
+                
+                // Random positioning and styling
+                flower.style.left = Math.random() * 95 + '%';
+                flower.style.fontSize = sizes[Math.floor(Math.random() * sizes.length)] + 'px';
+                flower.style.top = '-10%';
+                
+                // Random duration
+                const duration = durations[Math.floor(Math.random() * durations.length)];
+                flower.style.animationDuration = duration + 's';
+                
+                container.appendChild(flower);
+                
+                // Remove flower after animation completes
+                setTimeout(() => {
+                    if (flower.parentNode === container) {
+                        container.removeChild(flower);
+                    }
+                }, duration * 1000);
+            }
+            
+            // Create initial flowers with staggered timing
+            for (let i = 0; i < 15; i++) {
+                setTimeout(createFlower, i * 1000);
+            }
+            
+            // Continuously create new flowers every 2 seconds
+            setInterval(createFlower, 2000);
+        })();
+    </script>
 </body>
 </html>
