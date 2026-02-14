@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Quiz ♡</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Carattere&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page-container">
+        <div class="background-layer"></div>
+        
+        <!-- Decorative flowers -->
+        <div class="flower-decor flower-1" style="top: 5%; left: 8%;">🌾</div>
+        <div class="flower-decor flower-2" style="top: 15%; right: 12%;">✿</div>
+        <div class="flower-decor flower-3" style="bottom: 10%; left: 10%;">🌸</div>
+        <div class="flower-decor flower-4" style="bottom: 20%; right: 15%;">🌿</div>
+        
+        <div class="quiz-container">
+            <div class="quiz-card">
+                <div class="quiz-header">
+                    <h1 class="quiz-title">How Well Do You Know Us?</h1>
+                    <p class="quiz-intro">
+                        Let's see how much you remember about our journey together ♡
+                    </p>
+                </div>
+                
+                <form id="quizForm">
+                    <!-- Question 1 -->
+                    <div class="question-card">
+                        <div class="question-number">Question 1</div>
+                        <div class="question-text">What was the date of our first month together?</div>
+                        <div class="options">
+                            <label class="option-label">
+                                <input type="radio" name="q1" value="a">
+                                October 10, 2024
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="q1" value="b">
+                                October 14, 2024
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="q1" value="c">
+                                October 20, 2024
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="q1" value="d">
+                                October 25, 2024
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <!-- Question 2 -->
+                    <div class="question-card">
+                        <div class="question-number">Question 2</div>
+                        <div class="question-text">What's our favorite thing to do together?</div>
+                        <div class="options">
+                            <label class="option-label">
+                                <input type="radio" name="q2" value="a">
+                                Watching movies
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="q2" value="b">
+                                Going for walks
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="q2" value="c">
+                                Cooking together
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="q2" value="d">
+                                Having deep conversations
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <!-- Question 3 -->
+                    <div class="question-card">
+                        <div class="question-number">Question 3</div>
+                        <div class="question-text">What song reminds you most of us?</div>
+                        <div class="options">
+                            <label class="option-label">
+                                <input type="radio" name="q3" value="a">
+                                Perfect by Ed Sheeran
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="q3" value="b">
+                                Everything by Michael Bublé
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="q3" value="c">
+                                Can't Help Falling in Love
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="q3" value="d">
+                                A Thousand Years by Christina Perri
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <!-- Question 4 -->
+                    <div class="question-card">
+                        <div class="question-number">Question 4</div>
+                        <div class="question-text">What's my favorite thing about you?</div>
+                        <div class="options">
+                            <label class="option-label">
+                                <input type="radio" name="q4" value="a">
+                                Your smile
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="q4" value="b">
+                                Your kindness
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="q4" value="c">
+                                Your sense of humor
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="q4" value="d">
+                                Everything
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <!-- Question 5 -->
+                    <div class="question-card">
+                        <div class="question-number">Question 5</div>
+                        <div class="question-text">What's our dream date?</div>
+                        <div class="options">
+                            <label class="option-label">
+                                <input type="radio" name="q5" value="a">
+                                Beach sunset picnic
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="q5" value="b">
+                                Stargazing under the night sky
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="q5" value="c">
+                                Cozy café date
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="q5" value="d">
+                                Adventure in nature
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="submit-button">
+                        See How Well You Did! ♡
+                    </button>
+                </form>
+                
+                <div id="quizResult" class="quiz-result">
+                    <div class="result-score"></div>
+                    <div class="result-message"></div>
+                    <a href="index.html" class="back-button">
+                        Back to Home
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Quiz answers (customize these based on your actual relationship!)
+        const correctAnswers = {
+            q1: 'b',  // October 14, 2024
+            q2: 'd',  // Having deep conversations
+            q3: 'a',  // Perfect by Ed Sheeran
+            q4: 'd',  // Everything
+            q5: 'b'   // Stargazing
+        };
+        
+        const quizForm = document.getElementById('quizForm');
+        const quizResult = document.getElementById('quizResult');
+        
+        quizForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            let score = 0;
+            let totalQuestions = Object.keys(correctAnswers).length;
+            
+            // Calculate score
+            for (let question in correctAnswers) {
+                const selectedAnswer = document.querySelector(`input[name="${question}"]:checked`);
+                if (selectedAnswer && selectedAnswer.value === correctAnswers[question]) {
+                    score++;
+                }
+            }
+            
+            // Display result
+            const percentage = (score / totalQuestions) * 100;
+            let message = '';
+            
+            if (percentage === 100) {
+                message = "Perfect score! You know us so well! ❀ We're meant to be together forever.";
+            } else if (percentage >= 80) {
+                message = "Amazing! You really pay attention to us! ✿ You're the best partner ever!";
+            } else if (percentage >= 60) {
+                message = "Great job! You know us pretty well! ♡ Let's make more memories together.";
+            } else if (percentage >= 40) {
+                message = "Not bad! There's still so much for us to discover! 🌸 Every day is a new adventure.";
+            } else {
+                message = "We're still getting to know each other! 🌿 And that's the beautiful part!";
+            }
+            
+            document.querySelector('.result-score').textContent = `You scored ${score} out of ${totalQuestions}!`;
+            document.querySelector('.result-message').textContent = message;
+            
+            // Hide form and show result
+            quizForm.style.display = 'none';
+            quizResult.classList.add('show');
+            
+            // Scroll to result
+            quizResult.scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
