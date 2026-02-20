@@ -413,8 +413,8 @@ body {
 }
 
 .photo-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
     gap: 1.5rem;
     margin-bottom: 2rem;
     max-width: 900px;
@@ -735,3 +735,4 @@ body {
         gap: 1rem;
     }
 }
+
