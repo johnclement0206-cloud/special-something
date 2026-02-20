@@ -234,7 +234,7 @@ body {
     font-style: italic;
     color: var(--text-brown);
     line-height: 1.6;
-    margin-bottom: 1.8rem;
+    margin-bottom: 1.5rem;
     max-width: 500px;
     margin-left: auto;
     margin-right: auto;
@@ -251,7 +251,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     animation: fadeIn 1s ease-out 1.1s both;
 }
 
@@ -316,9 +316,10 @@ body {
 
 .signature {
     font-family: 'Mrs Saint Delafield', cursive;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     color: var(--text-brown);
-    opacity: 0.8;
+    opacity: 0.85;
+    line-height: 1.4;
     animation: fadeIn 1s ease-out 1.3s both;
 }
 
@@ -412,14 +413,18 @@ body {
     font-size: 1rem;
 }
 
+/* Photo Grid - FIXED 3x3 LAYOUT */
 .photo-grid {
     display: grid !important;
     grid-template-columns: repeat(3, 1fr) !important;
+    grid-auto-rows: auto;
     gap: 1.5rem;
     margin-bottom: 2rem;
     max-width: 900px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
+    justify-items: stretch;
 }
 
 .photo-item {
@@ -735,4 +740,3 @@ body {
         gap: 1rem;
     }
 }
-
