@@ -414,9 +414,12 @@ body {
 
 .photo-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
     margin-bottom: 2rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .photo-item {
@@ -453,6 +456,7 @@ body {
 .photo-item:nth-child(6) { animation-delay: 0.6s; }
 .photo-item:nth-child(7) { animation-delay: 0.7s; }
 .photo-item:nth-child(8) { animation-delay: 0.8s; }
+.photo-item:nth-child(9) { animation-delay: 0.9s; }
 
 .photo-placeholder {
     width: 100%;
@@ -467,7 +471,6 @@ body {
     font-family: 'Crimson Text', serif;
     color: var(--text-brown);
     font-size: 0.9rem;
-    margin-bottom: 0.75rem;
     overflow: hidden;
 }
 
@@ -475,13 +478,6 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-
-.photo-caption {
-    font-family: 'Carattere', cursive;
-    font-size: 1.3rem;
-    color: var(--text-dark);
-    text-align: center;
 }
 
 .back-button {
@@ -707,7 +703,8 @@ body {
     }
     
     .photo-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
     }
     
     .quiz-card {
@@ -731,5 +728,10 @@ body {
     .nav-button {
         font-size: 1rem;
         padding: 0.875rem 1.5rem;
+    }
+    
+    .photo-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
     }
 }
