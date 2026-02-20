@@ -13,8 +13,10 @@
     <div class="page-container">
         <div class="background-layer"></div>
         
+        <!-- Falling flowers layer (above background, behind content) -->
         <div class="falling-flowers-container" id="flowersContainer"></div>
         
+        <!-- Decorative flowers scattered around -->
         <div class="flower-decor flower-1" style="top: 5%; left: 8%;">🌾</div>
         <div class="flower-decor flower-2" style="top: 15%; right: 12%;">✿</div>
         <div class="flower-decor flower-3" style="bottom: 10%; left: 10%;">🌸</div>
@@ -22,10 +24,13 @@
         <div class="flower-decor flower-5" style="top: 40%; left: 5%;">✾</div>
         <div class="flower-decor flower-6" style="top: 60%; right: 8%;">❀</div>
         
+        <!-- Main content card -->
         <div class="content-card">
+            <!-- Tape elements -->
             <div class="tape tape-top"></div>
             <div class="tape tape-side"></div>
             
+            <!-- Dried flower decorations -->
             <div class="dried-flowers dried-flowers-left">
                 <img src="https://i.pinimg.com/736x/c8/f5/89/c8f589f6e8a8c1c1f5e5e5e5e5e5e5e5.jpg" alt="dried flowers" class="flower-img">
             </div>
@@ -33,6 +38,7 @@
                 <img src="https://i.pinimg.com/736x/8d/c2/a3/8dc2a3f1e1e1e1e1e1e1e1e1e1e1e1e1.jpg" alt="dried flowers" class="flower-img">
             </div>
             
+            <!-- Main text content -->
             <div class="main-content">
                 <div class="date-label">November 21, 2025 - February 21, 2026</div>
                 
@@ -58,33 +64,40 @@
                 </div>
                 
                 <div class="signature">
-                    Hi babii, its Helaine I hope you like this and I LOVEEE YOUU VERYY MUCHH HAPPY 4TH MONTHSARY
+                    Hi babii, it's Helaine<br>
+                    I hope you like this<br>
+                    I LOVEEE YOUUU VERYY MUCHH<br>
+                    HAPPY 4TH MONTHSARY ❀
                 </div>
             </div>
         </div>
     </div>
     
     <script>
+        // Efficient falling flowers animation with cleanup
         (function() {
             const container = document.getElementById('flowersContainer');
             const flowers = ['🌸', '✿', '🌼', '❀', '🌺', '✾', '🌷', '🌹', '💐', '🏵️'];
-            const durations = [13, 14, 15, 16, 17, 18, 19];
-            const sizes = [20, 22, 24, 26, 28];
+            const durations = [13, 14, 15, 16, 17, 18, 19]; // seconds
+            const sizes = [20, 22, 24, 26, 28]; // pixels
             
             function createFlower() {
                 const flower = document.createElement('div');
                 flower.className = 'flower-petal falling';
                 flower.textContent = flowers[Math.floor(Math.random() * flowers.length)];
                 
+                // Random positioning and styling
                 flower.style.left = Math.random() * 95 + '%';
                 flower.style.fontSize = sizes[Math.floor(Math.random() * sizes.length)] + 'px';
                 flower.style.top = '-10%';
                 
+                // Random duration
                 const duration = durations[Math.floor(Math.random() * durations.length)];
                 flower.style.animationDuration = duration + 's';
                 
                 container.appendChild(flower);
                 
+                // Remove flower after animation completes
                 setTimeout(() => {
                     if (flower.parentNode === container) {
                         container.removeChild(flower);
@@ -92,16 +105,14 @@
                 }, duration * 1000);
             }
             
+            // Create initial flowers with staggered timing
             for (let i = 0; i < 15; i++) {
                 setTimeout(createFlower, i * 1000);
             }
             
+            // Continuously create new flowers every 2 seconds
             setInterval(createFlower, 2000);
         })();
     </script>
 </body>
 </html>
-
-
-
-
